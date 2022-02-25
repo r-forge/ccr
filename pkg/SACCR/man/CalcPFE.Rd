@@ -4,7 +4,7 @@
 \alias{CalcPFE}
 \title{Calculates the PFE}
 \usage{
-CalcPFE(V_C, Addon_Aggregate, simplified, V = 0)
+CalcPFE(V_C, V = 0,Addon_Aggregate, simplified)
 }
 \arguments{
 \item{V_C}{the difference between the sum of the MtMs and the collateral}
