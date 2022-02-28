@@ -18,7 +18,7 @@ LazyData: TRUE
 Collate: 'CalcNGR.R' 'CalcPD.R' 'CalcSimulatedExposure.R' 'CalcVA.R'
         'GenerateTimeGrid.R' 'calcCVACapital.R' 'calcDefCapital.R'
         'calcEADRegulatory.R' 'calcEffectiveMaturity.R' 'calcKVA.R'
-        'xVACalculator.R' 'xVACalculatorExample.R'
+        'xVACalculator.R' 'xVACalculatorExample.R' 'onLoad.R'
 NeedsCompilation: no
 RoxygenNote: 7.1.1
 Repository: CRAN
