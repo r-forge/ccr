@@ -1,8 +1,8 @@
 Package: xVA
 Type: Package
 Title: Calculates Credit Risk Valuation Adjustments
-Version: 0.8.5
-Date: 2020-08-16
+Version: 0.8.6
+Date: 2022-02-28
 Author: Tasos Grivas
 Maintainer: Tasos Grivas <tasos@openriskcalculator.com>
 Description: Calculates a number of valuation adjustments including CVA, DVA,
