@@ -1,11 +1,11 @@
-#' @description Calculates the potential profit or loss when someone is betting in the roulette based on the Labouchère Betting System.
+#' @description Calculates the potential profit or loss when someone is betting in the roulette based on the Labouchere Betting System.
 #'  
-#' @title Roulette P&L betting based on the Labouchère Betting System
+#' @title Roulette P&L betting based on the Labouchere Betting System
 #' @param bet_minimum The minimum betting amount that the casino allows
 #' @param bet_maximum The maximum betting amount that the casino allows
 #' @param initial_capital The initial capital to be used
 #' @param profit_target The profit amount to be earned
-#' @param profit_sequence (Optional) the amounts of the bets to reach this profit amount. If ommitted, the minimum betting amount will be used
+#' @param profit_sequence (Optional) the amounts of the bets to reach this profit amount. If omitted, the minimum betting amount will be used
 #' @param simulations_num The number of simulations to be run
 #' @param trials_per_sim  The number of trials in each simulation
 #' @return A list containing the minimum, the maximum and the final balance for each simulation. Also the P&L graph for the last simulation will be plotted.
@@ -18,7 +18,8 @@
 #' # This software is covered by GPL license and provided strictly for educational
 #' # reasons (no actual investment/betting decisions should be taken based on this)
 #' pl_results = roulette_pl_calculator_labouchere(bet_minimum = 0.1 , bet_maximum = 3276.8,
-#' initial_capital = 20000, profit_target = 100, profit_sequence = rep(10,10), simulations_num = 1000, trials_per_sim = 10000)
+#' initial_capital = 20000, profit_target = 100, profit_sequence = rep(10,10),
+#'  simulations_num = 1000, trials_per_sim = 10000)
 #' summary(pl_results$min_capital)
 #' summary(pl_results$max_capital)
 #' summary(pl_results$final_capital)
