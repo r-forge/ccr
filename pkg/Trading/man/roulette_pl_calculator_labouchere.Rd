@@ -39,9 +39,12 @@ Calculates the potential profit or loss when someone is betting in the roulette 
 
 # This software is covered by GPL license and provided strictly for educational
 # reasons (no actual investment/betting decisions should be taken based on this)
+# On top of these, the below example contains a tiny number of simulations and
+# trials just to pass CRAN tests - the user would have to highly increase both
+# variables when running these.
 pl_results = roulette_pl_calculator_labouchere(bet_minimum = 0.1 , bet_maximum = 3276.8,
 initial_capital = 20000, profit_target = 100, profit_sequence = rep(10,10),
- simulations_num = 1000, trials_per_sim = 10000)
+ simulations_num = 100, trials_per_sim = 100)
 summary(pl_results$min_capital)
 summary(pl_results$max_capital)
 summary(pl_results$final_capital)

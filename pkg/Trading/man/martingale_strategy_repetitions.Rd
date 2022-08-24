@@ -35,6 +35,9 @@ This can apply to roulette betting but also trading algorithms which use the sam
 
 # This software is covered by GPL license and provided strictly for educational 
 # reasons (no actual investment or betting decisions should be taken based on this)
+# On top of these, the below example contains a tiny number of simulations and
+# trials just to pass CRAN tests - the user would have to highly increase both
+# variables when running these.
 repetitions_for_failed_sequence = martingale_strategy_repetitions(length_of_targeted_sequence = 8,
 prob_of_success = 18/37, simulations_num = 1000, trials_per_sim = 10000, quantile_perc = 0.1)
 repetitions_for_failed_sequence$relevant_quantile

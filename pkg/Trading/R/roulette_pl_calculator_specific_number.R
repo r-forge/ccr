@@ -18,10 +18,13 @@
 #' @examples
 #' 
 #' # This software is covered by GPL license and provided strictly for educational 
-#' #' # reasons (no actual investment or betting decisions should be taken based on this)
+#' # reasons (no actual investment or betting decisions should be taken based on this)
+#' # On top of these, the below example contains a tiny number of simulations and
+#' # trials just to pass CRAN tests - the user would have to highly increase both
+#' # variables when running these.
 #' pl_results = roulette_pl_calculator_specific_number(bet_minimum =0.1 , bet_maximum = 3276.8,
-#' initial_capital = 20000, targeted_number = 0, simulations_num = 1000, 
-#' trials_per_sim = 10000, stop_loss = 180)
+#' initial_capital = 20000, targeted_number = 0, simulations_num = 100, 
+#' trials_per_sim = 100, stop_loss = 180)
 #' summary(pl_results$min_capital)
 #' summary(pl_results$max_capital)
 #' summary(pl_results$final_capital)
