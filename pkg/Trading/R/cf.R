@@ -19,5 +19,8 @@
 Carbon_Footprint <- function(portfolio_exposure, emissions_capitalization_data)  
 {
   merged_data = setkey(portfolio_exposure,'Issuers')[setkey(emissions_capitalization_data,'Issuers')]
-  return(sum(merged_data[,exposures/Capitalization*emissions])/sum(merged_data$exposures))
+  #   that's the efficient way to do it - won't work with CRAN checks though...
+  #   return(sum(merged_data[,exposures/Capitalization*emissions])/sum(merged_data$exposures))
+  return(sum(merged_data$exposures/merged_data$Capitalization*merged_data$emissions)/sum(merged_data$exposures))  
+  
 }

@@ -19,7 +19,11 @@
 #'  Weighted_Average_Carbon_Intensity(portfolio_exposure, emissions_revenue_data)
 Weighted_Average_Carbon_Intensity <- function(portfolio_exposure, emissions_revenue_data)  
 {
-  portfolio_exposure[,weights:= exposures/sum(exposures)] 
+  portfolio_exposure$weights = portfolio_exposure$exposures/sum(portfolio_exposure$exposures)
   merged_data = setkey(portfolio_exposure,'Issuers')[setkey(emissions_revenue_data,'Issuers')]
-  return(sum(merged_data[,weights*emissions/revenue]))
+  #   that's the efficient way to do it - won't work with CRAN checks though...
+  #   portfolio_exposure[,weights:= exposures/sum(exposures)]
+  #  return(sum(merged_data[,weights*emissions/revenue]))
+  return(sum(merged_data$weights*merged_data$emissions/merged_data$revenue))
+  
 }

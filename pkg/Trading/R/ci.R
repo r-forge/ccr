@@ -19,6 +19,10 @@
 Carbon_Intensity <- function(portfolio_exposure, emissions_capitalization_revenue_data)  
 {
   merged_data = setkey(portfolio_exposure,'Issuers')[setkey(emissions_capitalization_revenue_data,'Issuers')]
-  merged_data[,weights:=exposures/Capitalization] 
-  return(sum(merged_data[,weights*emissions])/sum(merged_data[,weights*revenue]))
+  
+  # that's the efficient way to do it - won't work with CRAN checks though...
+  # merged_data[, weights=exposures/Capitalization]
+  # return(sum(merged_data[,weights*emissions])/sum(merged_data[,weights*revenue]))
+  merged_data$weights=merged_data$exposures/merged_data$Capitalization
+  return(sum(merged_data$weights*merged_data$emissions)/sum(merged_data$weights*merged_data$revenue))
 }
