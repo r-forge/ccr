@@ -52,9 +52,6 @@ xVACalculator = function(trades, CSA, collateral, sim_data, reg_data, credit_cur
   
   xVA = list()
   
-
-  
-  xVA$KVA        = calcKVA(CSA, collateral, trades, reg_data, time_points, EAD$EAD_Value, effective_maturity, reg_data$ignore_def_charge)
   if(!no_simulations)
   {
     xVA$CVA_simulated        = CalcVA(exposure_profile$EE,  discount_factors, PD_cpty, cpty_LGD)
@@ -130,5 +127,7 @@ xVACalculator = function(trades, CSA, collateral, sim_data, reg_data, credit_cur
     xVA$MVA_simulated        = xVA$FCA_simulated*2*sqrt(reg_data$mva_days/(250*maturity))*qnorm(reg_data$mva_percentile)/dnorm(0)
   }
 
+  xVA$KVA        = calcKVA(trades, reg_data, EAD$EAD_Value, effective_maturity, reg_data$ignore_def_charge, xVA$cva_capital_charge)
+  
   return(xVA)
 }

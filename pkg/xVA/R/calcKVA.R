@@ -17,6 +17,8 @@ calcKVA = function(trades, reg_data, EAD, effective_maturity, ignore_def_charge 
   }else
   {def_capital_charge = calcDefCapital(trades,EAD, reg_data, effective_maturity)}
   
+  if(is.list(cva_capital_charge)) cva_capital_charge = cva_capital_charge$Total_charge
+  
   KVA = -(def_capital_charge+cva_capital_charge)*0.5*sqrt(effective_maturity)*reg_data$return_on_capital
   
   return(KVA)
