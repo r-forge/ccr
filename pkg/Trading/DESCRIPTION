@@ -1,8 +1,8 @@
 Package: Trading
 Type: Package
 Title: CCR, Advanced Correlation & Beta Estimates, Betting Strategies
-Version: 3.0
-Date: 2024-02-12
+Version: 3.1
+Date: 2025-01-12
 Author: Tasos Grivas
 Maintainer: Tasos Grivas <info@openriskcalculator.com>
 Description: Contains performance analysis metrics of track records including entropy-based
