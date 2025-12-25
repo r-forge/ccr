@@ -1,20 +1,24 @@
 Package: SACCR
 Type: Package
 Title: SA Counterparty Credit Risk under CRR2
-Version: 3.2
-Date: 2022-02-24
-Author: Tasos Grivas
+Version: 3.4
+Date: 2025-12-25
+Author: Tasos Grivas [aut, cre]
+Authors@R: person(given = "Tasos", 
+  family = "Grivas", 
+  role = c("aut", "cre"), 
+  email = "info@openriskcalculator.com")
 Maintainer: Tasos Grivas <info@openriskcalculator.com>
 Description: Computes the Exposure-At-Default based on  the standardized approach
     of CRR2 (SA-CCR). The simplified version of SA-CCR has been included, as well as the OEM methodology.
-	Multiple trade types of all the five major asset classes are being supported including the 'Other' Exposure and, given the inheritance-
+	Multiple trade types of all the five major asset classes are being supported including the Other Exposure and, given the inheritance-
     based structure of the application, the addition of further trade types
     is straightforward. The application returns a list of trees per Counterparty and CSA after
     automatically separating the trades based on the Counterparty, the CSAs, the hedging sets, the
     netting sets and the risk factors. The basis and volatility transactions are
     also identified and treated in specific hedging sets whereby the corresponding 
     penalty factors are applied. All the examples appearing on the
-    regulatory papers (both for the margined and the un-margined workflow) have been
+    regulatory papers (both for the margined and the unmargined workflow) have been
     implemented including the latest CRR2 developments.
 License: GPL-3
 Imports: methods, data.tree, jsonlite, Trading
@@ -26,7 +30,10 @@ Collate: 'CalcAddon.R' 'CalcEAD.R' 'CalcPFE.R' 'CalcRC.R'
         'runExampleCalcs.R' 'CalculateFactorMult.R'
         'CreateTradeGraph.R' 'GroupCommTrades.R' 'GroupCreditTrades.R'
         'GroupEquityTrades.R' 'GroupFXTrades.R' 'GroupIRDTrades.R'
-        'GroupTrades.R' 'SACCRCalculator.R' 'SingleTradeAddon.R' 'onLoad.R'
-		'DetermineCCRMethodology.R' 'GroupOtherTrades.R'
+        'GroupTrades.R' 'SACCRCalculator.R' 'SingleTradeAddon.R'
+        'onLoad.R' 'DetermineCCRMethodology.R' 'GroupOtherTrades.R' 'ExampleFXHedge.R'
 NeedsCompilation: no
-RoxygenNote: 7.1.1
+RoxygenNote: 7.3.2
+Repository: CRAN
+Packaged: 2025-05-10 08:09:46 UTC; user1
+Date/Publication: 2025-05-13 08:30:10 UTC
