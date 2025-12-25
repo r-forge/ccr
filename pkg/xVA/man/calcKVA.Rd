@@ -24,7 +24,7 @@ calcKVA(
 
 \item{ignore_def_charge}{if set to true the default capital charge is set to zero}
 
-\item{cva_capital_charge}{The CVA capital charge}
+\item{cva_capital_charge}{The CVA Capital Charge linked to this portfolio}
 }
 \value{
 The capital valuation adjustment (KVA)
